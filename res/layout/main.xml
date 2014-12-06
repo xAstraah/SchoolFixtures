@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Username:"
+    android:gravity="center_horizontal"
+    />
+
+<EditText
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:gravity="center_horizontal"
+    android:id="@+id/username"
+    />
+
+<TextView
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Password:"
+    android:gravity="center_horizontal"
+    />
+
+<EditText
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:gravity="center_horizontal"
+    android:inputType="textPassword"
+    android:id="@+id/password"
+    />
+
+<Button
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:text="Login"
+    android:gravity="center_horizontal"
+    android:id="@+id/login"
+    />  
+
+<TextView
+    android:layout_width="fill_parent" 
+    android:layout_height="250sp" 
+    android:gravity="center_horizontal"
+    />
+
+<Button
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:text="Skip login" 
+    android:gravity="center_horizontal"
+    android:id="@+id/skiplogin"
+    />
+
+</LinearLayout>

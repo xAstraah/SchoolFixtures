@@ -6,7 +6,9 @@
 package me.stephenropke.schoolfixtures;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 /**
@@ -25,9 +27,14 @@ public class Fixtures extends Activity {
         super.onCreate(icicle);
         setContentView(R.layout.fixtures);
         
-        Authentication a = new Authentication();
-        
         addfixture = (Button) findViewById(R.id.addfixture);
+        
+        addfixture.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+                startActivity(new Intent(Fixtures.this, CreateFixture.class));
+            }
+        });
     }
     
 }

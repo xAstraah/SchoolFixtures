@@ -5,18 +5,34 @@
     android:layout_height="fill_parent"
     >
     
-<TextView
+<EditText
     android:layout_width="fill_parent" 
-    android:layout_height="3sp" 
-    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    android:hint="Type:"
     />
     
-<Button  
+<EditText
     android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Add a new fixture"
-    android:gravity="center_horizontal"
-    android:id="@+id/addfixture"
+    android:layout_height="wrap_content"
+    android:hint="Description:"
+    />
+
+<EditText
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:hint="Date:"
+    />
+
+<EditText
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:hint="Result:"
+    />
+
+<Button
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:text="Submit fixture"
     />
 
 </LinearLayout>

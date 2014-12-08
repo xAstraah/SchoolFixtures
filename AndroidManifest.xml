@@ -15,5 +15,9 @@
         <activity android:name="Fixtures"
                   android:label="@string/app_name" >
         </activity>
+        
+        <activity android:name="CreateFixture"
+                  android:label="@string/app_name" >
+        </activity>
     </application>
 </manifest> 

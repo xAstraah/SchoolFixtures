@@ -15,7 +15,7 @@ public class Authentication {
     private static int authLevel = 0;
     
     public void setUsername(String un) {
-        this.username = un;
+        Authentication.username = un;
     }
     
     public String getUsername() {
@@ -23,7 +23,7 @@ public class Authentication {
     }
     
     public void setAuthLevel(int i) {
-        this.authLevel = i;
+        Authentication.authLevel = i;
     }
     
     public int getAuthLevel() {

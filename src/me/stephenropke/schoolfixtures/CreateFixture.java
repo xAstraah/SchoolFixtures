@@ -33,7 +33,7 @@ public class CreateFixture extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "Feature not yet implemented!", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "Feature not yet implemented!", Toast.LENGTH_SHORT).show();
 			}
 		});
     }

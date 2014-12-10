@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  *
@@ -32,6 +33,13 @@ public class Fixtures extends Activity {
         addfixture.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+                Authentication a = new Authentication();
+                
+                if(a.getAuthLevel() != 1) {
+                    Toast.makeText(getApplicationContext(), "You don't have authentication!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                
                 startActivity(new Intent(Fixtures.this, CreateFixture.class));
             }
         });

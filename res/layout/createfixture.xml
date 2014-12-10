@@ -9,35 +9,35 @@
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content"
     android:hint="Type:"
-    android:id="@+id/type"
+    android:id="@+id/etType"
     />
     
 <EditText
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content"
     android:hint="Description:"
-    android:id="@+id/desc"
+    android:id="@+id/etDesc"
     />
 
 <EditText
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content"
     android:hint="Date:"
-    android:id="@+id/date"
+    android:id="@+id/etDate"
     />
 
 <EditText
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content"
     android:hint="Result:"
-    android:id="@+id/result"
+    android:id="@+id/etResult"
     />
 
 <Button
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content"
     android:text="Submit fixture"
-    android:id="@+id/submit"
+    android:id="@+id/etSubmit"
     />
 
 </LinearLayout>

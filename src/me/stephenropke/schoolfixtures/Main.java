@@ -29,7 +29,7 @@ public class Main extends Activity
         login.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                if(username.getText().toString().equals("Mr.Ropke") && password.getText().toString().equals("Thenameisropke")) {
+                if(username.getText().toString().equals("1") && password.getText().toString().equals("1")) {
                     Authentication a = new Authentication();
                     a.setUsername(username.getText().toString());
                     a.setAuthLevel(1);

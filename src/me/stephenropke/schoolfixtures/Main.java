@@ -37,7 +37,7 @@ public class Main extends Activity
                     startActivity(fixturesScreen);
                 } else {
                     String incorrectunop = "Incorrect username or password!";
-                    Toast.makeText(getApplicationContext(), incorrectunop, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), incorrectunop, Toast.LENGTH_SHORT).show();
                 }
             }
         });

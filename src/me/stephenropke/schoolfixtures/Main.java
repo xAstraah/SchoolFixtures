@@ -44,6 +44,9 @@ public class Main extends Activity
         
         skiplogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                Authentication a = new Authentication();
+                a.setUsername("Guest");
+                a.setAuthLevel(0);
                 Intent fixturesScreen = new Intent(Main.this, Fixtures.class);
                 startActivity(fixturesScreen);
             }

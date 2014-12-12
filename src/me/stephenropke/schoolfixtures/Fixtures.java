@@ -89,7 +89,7 @@ public class Fixtures extends Activity {
     public void connect() {
         
         /*
-        *
+        * Creates a list to hold all of the fixtures once they are downloaded.
         */
         
         String data;
@@ -98,7 +98,7 @@ public class Fixtures extends Activity {
         ListView list = (ListView) findViewById(R.id.listView1);
         
         /*
-        *
+        * Connects to the MySQL database through a php file and outputs the fixtures in JSON format.
         */
         
         try {
@@ -111,7 +111,7 @@ public class Fixtures extends Activity {
             try {
                 
                 /*
-                *
+                * Iterates through the database to get all the fixtures and all of the fixtures information.
                 */
                 
                 JSONArray json = new JSONArray(data);
@@ -136,7 +136,8 @@ public class Fixtures extends Activity {
         }
         
         /*
-        *
+        * TODO: When you click on a item in the list it will change the screen layout from
+        * fixtures.xml to moreinfoonfixture.xml and will display the full type, description, date, and result.
         */
         
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

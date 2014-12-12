@@ -85,6 +85,8 @@ public class CreateFixture extends Activity {
                     
                     String msg = "Fixture submitted!";
                     Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                    
+                    startActivity(new Intent(CreateFixture.this, Fixtures.class));
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (IllegalStateException e) {

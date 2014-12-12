@@ -52,26 +52,55 @@ public class Fixtures extends Activity {
         
         addfixture = (Button) findViewById(R.id.addfixture);
         
+        /*
+        * Tells the application what to do if the add fixture button is clicked.
+        */
+        
         addfixture.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
                 Authentication a = new Authentication();
+                
+                /*
+                * Checks if the user has logged in / the current users authLevel.
+                * If their authLevel is 0 they will not have access.
+                * If their authLevel is 1 they will have access.
+                */
                 
                 if(a.getAuthLevel() != 1) {
                     Toast.makeText(getApplicationContext(), "You don't have authentication!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 
+                /*
+                * If they have access the screen layout will change from fixtures.xml to createfixture.xml.
+                */
+                
                 startActivity(new Intent(Fixtures.this, CreateFixture.class));
             }
         });
     }
     
+    /*
+    * This is a custom method that has been made to connect to the MySQL database where all the fixtures are stored.
+    * This will also make it so it displays the new fixtures on the Fixtures list.
+    */
+    
     public void connect() {
+        
+        /*
+        *
+        */
+        
         String data;
         List<String> r = new ArrayList<String>();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, r);
         ListView list = (ListView) findViewById(R.id.listView1);
+        
+        /*
+        *
+        */
+        
         try {
             DefaultHttpClient client = new DefaultHttpClient();
             HttpGet request = new HttpGet("http://10.0.2.2/retrievedata.php");
@@ -80,6 +109,11 @@ public class Fixtures extends Activity {
             data=EntityUtils.toString(entity);
             Log.e("STRING", data);
             try {
+                
+                /*
+                *
+                */
+                
                 JSONArray json = new JSONArray(data);
                 for(int i = 0; i < json.length(); i++) {
                     JSONObject obj = json.getJSONObject(i);
@@ -100,6 +134,10 @@ public class Fixtures extends Activity {
         } catch(IOException e) {
             Log.d("HTTPCLIENT", e.getLocalizedMessage());
         }
+        
+        /*
+        *
+        */
         
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {

@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -99,6 +100,12 @@ public class Fixtures extends Activity {
         } catch(IOException e) {
             Log.d("HTTPCLIENT", e.getLocalizedMessage());
         }
+        
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                Intent MoreInfoOnFixtureScreen = new Intent(Fixtures.this, MoreInfoOnFixture.class);
+            }
+        });
     }
     
 }

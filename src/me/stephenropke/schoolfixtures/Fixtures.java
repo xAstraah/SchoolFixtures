@@ -35,11 +35,12 @@ import org.json.JSONObject;
  */
 public class Fixtures extends Activity {
     
+    /*
+    * Creates a field to be initialised later.
+    */
+    
     Button addfixture;
     
-    /**
-     * Called when the activity is first created.
-     */
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -48,7 +49,15 @@ public class Fixtures extends Activity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         
+        /*
+        * Calls our connect(); method and executes the code inside of it when we load the Fixtures screen.
+        */
+        
         connect();
+        
+        /*
+        * Initialises the field.
+        */
         
         addfixture = (Button) findViewById(R.id.addfixture);
         

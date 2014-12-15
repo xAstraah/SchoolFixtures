@@ -31,6 +31,10 @@ import org.apache.http.message.BasicNameValuePair;
  */
 public class CreateFixture extends Activity {
     
+    /*
+    * Initialise fields.
+    */
+    
     EditText etType, etDesc, etDate, etResult;
     Button etSubmit;
     
@@ -40,11 +44,19 @@ public class CreateFixture extends Activity {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        /*
+        * StrictMode is a developer tool that will alert you if you have made a error in your code accidentally or if you have
+        * Created a bug or something around the same lines.
+        */
         
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         
         setContentView(R.layout.createfixture);
+        
+        /*
+        * Initialises the fields that were set earlier into variables.
+        */
         
         etType = (EditText) findViewById(R.id.etType);
         etDesc = (EditText) findViewById(R.id.etDesc);
@@ -52,9 +64,18 @@ public class CreateFixture extends Activity {
         etResult = (EditText) findViewById(R.id.etResult);
         etSubmit = (Button) findViewById(R.id.etSubmit);
         
+        /*
+        * Tells the application what to do when the Submit button is clicked.
+        */
+        
         etSubmit.setOnClickListener(new View.OnClickListener() {
             
             InputStream is = null;
+            
+            /*
+            * The code will upload the values in the EditText boxes to the MySQL database that is hosted on a local machine
+            * if they contain values if not it will the data as blank fields. (Needs to be checked over for slight bugs)
+            */
             
             public void onClick(View view) {
                 String type = etType.getText().toString();
@@ -76,7 +97,7 @@ public class CreateFixture extends Activity {
                     }
                     
                     HttpClient httpClient = new DefaultHttpClient();
-                    HttpPost httpPost = new HttpPost("http://10.0.2.2/mysqlfile.php");
+                    HttpPost httpPost = new HttpPost("http://10.0.2.2/mysqlfile.php"); //Connect to the MySQL database via a PHP file.
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                     
                     HttpResponse response = httpClient.execute(httpPost);
@@ -87,6 +108,11 @@ public class CreateFixture extends Activity {
                     Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
                     
                     startActivity(new Intent(CreateFixture.this, Fixtures.class));
+                    
+                    /*
+                    * If there is a error make sure we catch it and print out where the error is and what type of error it is.
+                    */
+                    
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (IllegalStateException e) {

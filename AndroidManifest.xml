@@ -4,7 +4,15 @@
       android:versionCode="1"
       android:versionName="1.0">
     
+    <!--
+      This gives the app permission to access the internet.
+    -->
+    
     <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!--
+      This tells the app what to open first when the app is loaded and registers new activitys so that the app knows they exist.
+    -->
     
     <application android:label="@string/app_name" >
         <activity android:name="Main"

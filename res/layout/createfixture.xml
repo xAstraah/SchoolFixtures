@@ -3,7 +3,25 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    
+    <!--
+        ^ That makes it so that the application's fields e.g EditText's are put vertically in the middle and fill the space they have.
+    -->
+    
     >
+    
+    <!--
+        The following code will add these to the screen,
+        Type field eg. Swimming, football or tennis,
+        Description field eg. where and who,
+        Date field eg. 12/15/9201
+        Result field eg. N/A then update to 6 - 5!
+        
+        And last of all adding the submit button.
+        
+        Then the android:id="" makes it so that we can use the following to add certain functions to it and then we can tell
+        the buttons and text fields what to do.
+    -->
     
 <EditText
     android:layout_width="fill_parent" 

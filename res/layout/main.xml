@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+    <!--
+        This makes it so that the application's fields e.g EditText's are put vertically in the middle and fill the space they have.
+    -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
+    
+    <!--
+        The following makes the application display a username and password field for the user to input data into and
+        a submit button for the data to be checked over.
+        
+        Also at the end it adds a button called 'skipLogin' and that does what it says, it skips the login and your signed in as a guest later on.
+    -->
+    
 <TextView  
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 

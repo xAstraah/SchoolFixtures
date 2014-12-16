@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     
     <!--
-        ^ That makes it so that the application's fields e.g EditText's are put vertically in the middle and fill the space they have.
+        This makes it so that the application's fields e.g EditText's are put vertically in the middle and fill the space they have.
     -->
     
     >

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+    <!--
+        This makes it so that the application's fields e.g EditText's are put vertically in the middle and fill the space they have.
+    -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -7,11 +12,9 @@
     tools:context=".Fixtures"
     >
     
-<TextView
-    android:layout_width="fill_parent" 
-    android:layout_height="3sp" 
-    android:gravity="center_horizontal"
-    />
+    <!--
+        The button is in the top middle of the application and when clicked takes you do another screen.
+    -->
     
 <Button  
     android:layout_width="fill_parent" 
@@ -20,6 +23,10 @@
     android:gravity="center_horizontal"
     android:id="@+id/addfixture"
     />
+    
+    <!--
+        The listView is just under the button and shows information from the MySQL database.
+    -->
     
 <ListView
     android:id="@+id/listView1"

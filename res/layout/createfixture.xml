@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+    <!--
+        This makes it so that the application's fields e.g EditText's are put vertically in the middle and fill the space they have.
+    -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    
-    <!--
-        This makes it so that the application's fields e.g EditText's are put vertically in the middle and fill the space they have.
-    -->
-    
     >
     
     <!--
